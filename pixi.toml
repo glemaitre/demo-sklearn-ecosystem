@@ -25,3 +25,4 @@ skops = { path = "/Users/glemaitre/Documents/scratch/skops", editable = true }
 skore = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skore/skore/skore", editable = true }
 skrub = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skrub", editable = true }
 ipywidgets = ">=8.1.5, <9"
+plotly = ">=6.0.0, <7"
