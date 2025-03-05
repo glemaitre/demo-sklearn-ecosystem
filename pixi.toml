@@ -1,0 +1,22 @@
+[project]
+authors = ["Guillaume Lemaitre <guillaume@probabl.ai>"]
+channels = ["conda-forge"]
+name = "sklearn-ecosystem"
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = ">=3.13.2,<3.14"
+
+[pypi-dependencies]
+ipython = "*"
+ipykernel = "*"
+jupyterlab = "*"
+jupytext = "*"
+scikit-learn = ">=1.6.1, <2"
+sentence-transformers = ">=3.4.1, <4"
+skore = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skore/skore/skore", editable = true }
+skrub = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skrub", editable = true }
+ruff = ">=0.9.9, <0.10"
