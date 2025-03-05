@@ -6,6 +6,7 @@ platforms = ["osx-arm64"]
 version = "0.1.0"
 
 [tasks]
+convert-to-notebooks = { cmd = "jupytext --to notebook ./python_files/*.py && mkdir -p ./notebooks && mv ./python_files/*.ipynb ./notebooks" }
 
 [dependencies]
 python = ">=3.13.2,<3.14"
@@ -15,8 +16,10 @@ ipython = "*"
 ipykernel = "*"
 jupyterlab = "*"
 jupytext = "*"
+rich = ">=13.9.4, <14"
+ruff = ">=0.9.9, <0.10"
 scikit-learn = ">=1.6.1, <2"
 sentence-transformers = ">=3.4.1, <4"
+skops = { path = "/Users/glemaitre/Documents/scratch/skops", editable = true }
 skore = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skore/skore/skore", editable = true }
 skrub = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skrub", editable = true }
-ruff = ">=0.9.9, <0.10"
