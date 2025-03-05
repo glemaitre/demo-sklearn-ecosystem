@@ -10,6 +10,7 @@ convert-to-notebooks = { cmd = "jupytext --to notebook ./python_files/*.py && mk
 
 [dependencies]
 python = ">=3.13.2,<3.14"
+sqlite = "<3.49"
 
 [pypi-dependencies]
 ipython = "*"
@@ -23,3 +24,4 @@ sentence-transformers = ">=3.4.1, <4"
 skops = { path = "/Users/glemaitre/Documents/scratch/skops", editable = true }
 skore = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skore/skore/skore", editable = true }
 skrub = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skrub", editable = true }
+ipywidgets = ">=8.1.5, <9"
