@@ -12,6 +12,8 @@ os.environ["TOKENIZERS_PARALLELISM"] = "true"
 #
 # Let's open a skore project in which we will be able to store artifacts from our
 # experiments.
+
+# %%
 import skore
 
 my_project = skore.Project("../data/my_project", if_exists=True)
