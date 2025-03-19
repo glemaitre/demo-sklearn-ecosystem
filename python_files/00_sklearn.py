@@ -235,5 +235,3 @@ plt.tight_layout()
 #   - Pickling and security
 #   - Documentation
 #   - Registry
-
-# %%

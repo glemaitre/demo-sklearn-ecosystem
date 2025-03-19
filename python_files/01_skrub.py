@@ -90,7 +90,9 @@ cv_results
 
 # %% [markdown]
 #
-# Table joiner compatible with the scikit-learn API.
+# Table joiner compatible with the scikit-learn API. It allows to handle properly
+# states between training and prediction for which data wrangling with pure pandas or
+# polars would fail.
 
 # %%
 from skrub import Joiner

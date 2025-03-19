@@ -28,6 +28,7 @@ model = joblib.load("../data/03_model.joblib")
 # %%
 print(f"Accuracy: {model.score(X_test, y_test):.2f}")
 
+
 # %% [markdown]
 #
 # So what's wrong with this approach?
@@ -84,6 +85,7 @@ with open("/tmp/dumps/demo.txt", "r") as f:
 #
 # So by default, `skops` trust scikit-learn objects and we can do the same as with
 # `joblib`.
+
 
 # %%
 from skops import io as sio
@@ -174,41 +176,12 @@ model_card = model_card.add(
 )
 
 # %%
-model_card.render()
-
-# %%
-from sklearn.metrics import accuracy_score, ConfusionMatrixDisplay
-from sklearn.inspection import permutation_importance
-
-y_pred = model.predict(X_test)
-eval_descr = (
-    "The model is evaluated on test data using accuracy and F1-score with "
-    "macro average."
-)
-model_card = model_card.add(**{"Model description/Evaluation Results": eval_descr})
-
-accuracy = accuracy_score(y_test, y_pred)
-model_card.add_metrics(**{"accuracy": accuracy})
-
-disp = ConfusionMatrixDisplay.from_estimator(model, X_test, y_test)
-
-disp.figure_.savefig("../data/confusion_matrix.png")
-model_card.add_plot(
-    **{"Model description/Evaluation Results/Confusion Matrix": "confusion_matrix.png"}
-)
-
-importances = permutation_importance(model, X_test, y_test, n_repeats=10)
-model_card.add_permutation_importances(
-    importances,
-    X_test.columns,
-    plot_file="../data/importance.png",
-    plot_name="Permutation Importance",
-)
-
-# %%
-model_card.render()
+print(model_card.render())
 
 # %% [markdown]
+#
+# To provide model cards in use on open-hubs, we can have a look at the model card
+# on Hugging Face: https://huggingface.co/apprentissage-sirius/verbatims-gem
 #
 # ## Conclusions
 #
