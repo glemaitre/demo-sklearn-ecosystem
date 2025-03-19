@@ -122,3 +122,20 @@ colors = ['peachpuff', 'orange', 'tomato', "green", "blue"]
 for color, estimator_report in zip(colors, report.estimator_reports_):
     feat_perm = estimator_report.feature_importance.feature_permutation(max_samples=50)
     feat_perm.T.boxplot(vert=False, patch_artist=True, boxprops={'facecolor': color})
+# %%
+import seaborn as sns
+sns.set_theme(style="ticks", palette="pastel")
+
+list_df = []
+
+for estimator_report, i in zip(report.estimator_reports_, range(len(report.estimator_reports_))):
+    feat_perm = estimator_report.feature_importance.feature_permutation(max_samples=50).T
+    feat_perm["model"] = i
+    list_df.append(feat_perm)
+
+# %%
+import pandas as pd
+df_concat = pd.concat(list_df)
+# %%
+sns.boxplot(palette=["m", "g"], data=df_concat, orient="h", hue = "model")
+# %%
