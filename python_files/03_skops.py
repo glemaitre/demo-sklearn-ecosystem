@@ -207,3 +207,14 @@ model_card.add_permutation_importances(
 
 # %%
 model_card.render()
+
+# %% [markdown]
+#
+# ## Conclusions
+#
+# **Vision**
+# - Develop building blocks to bring scikit-learn closer to production
+#
+# **Wrap-up**
+# - Secure the persistence of scikit-learn models
+# - Document scikit-learn models in production via model cards
