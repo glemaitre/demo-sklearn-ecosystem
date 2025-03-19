@@ -90,7 +90,9 @@ cv_results
 
 # %% [markdown]
 #
-# Table joiner compatible with the scikit-learn API.
+# Table joiner compatible with the scikit-learn API. It allows to handle properly
+# states between training and prediction for which data wrangling with pure pandas or
+# polars would fail.
 
 # %%
 from skrub import Joiner
@@ -114,3 +116,22 @@ joiner = Joiner(
     add_match_info=False,
 )
 joiner.fit_transform(airports)
+
+# %% [markdown]
+#
+# ## Conclusions
+#
+# **Vision**
+# - Less wrangling, more machine learning
+# - Bring the world of database closer to machine learning
+#
+# **Wrap-up**
+# - Additional components to assemble, encode, and vectorize data
+# - Reduce boilerplate code to get good baseline
+# - Broader the scope of scikit-learn pipeline to the database world
+#
+# **Bold vision**
+# - scikit-learn should be the machine learning toolbox with its numerical
+#   optimization roots and expertise
+# - skrub could be where the data preparation happen with integration with
+#   dataframe-like libraries

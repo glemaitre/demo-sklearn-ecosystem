@@ -203,3 +203,35 @@ plt.tight_layout()
 # joblib.dump(search.best_estimator_, "../models/00_my_production_model.joblib")
 # prod_model = joblib.load("../models/00_my_production_model.joblib")
 # prod_model.predict(data)
+
+# %% [markdown]
+#
+# ## Conclusions
+#
+# ### Strengths
+#
+# - Simple consistent API
+# - A lot of building block to build and tune your predictive model
+# - A lot of tools to evaluate your predictive model
+# - A lot of tools to inspect your predictive model
+# - Robust and fast implementation
+# - Good documentation
+#
+# ### Pitfalls
+#
+# **From the demo**
+# - By nature, scikit-learn offers generic components
+# - Know-how is extremely important
+#   - No available baseline to start with
+#   - Some syntax are convoluted
+#   - Some choices to be made require expertise
+#   - One can make methodological errors
+#
+# **What we did not show**
+# - Data preprocessing is actually hard
+#   - Data can come from different sources
+#   - Transformations are not necessarily standardized
+# - What happens once predictive models are in production
+#   - Pickling and security
+#   - Documentation
+#   - Registry

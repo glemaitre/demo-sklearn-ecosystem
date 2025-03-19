@@ -131,3 +131,22 @@ import plotly.express as px
 df = px.data.tips()
 fig = px.box(df_concat, color = "model", orientation = "h")
 fig.show()
+
+# %% [markdown]
+#
+# ## Conclusions
+#
+# **Vision**
+# - Develop tooling to create data science artifacts
+# - Help at following good practices for the problem at hand
+# - Help at the collaboration to carry on data science project
+#
+# **Wrap-up**
+# - Provide tools to evaluate predictive models
+# - Make some internal magic to reduce user friction
+# - Allow for persistence of artifacts
+#
+# **Roadmap**
+# - Cover multiple aspects of the data science life cycles: data, model, etc.
+# - Help at creating artifacts dedicated to the problem at hand and the model
+# - Reduce the complexity related to code

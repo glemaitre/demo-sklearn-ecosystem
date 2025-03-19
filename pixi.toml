@@ -21,8 +21,9 @@ rich = ">=13.9.4, <14"
 ruff = ">=0.9.9, <0.10"
 scikit-learn = ">=1.6.1, <2"
 sentence-transformers = ">=3.4.1, <4"
-skops = { path = "/Users/glemaitre/Documents/scratch/skops", editable = true }
-skore = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skore/skore/skore", editable = true }
-skrub = { path = "/Users/glemaitre/Documents/scikit-learn-workspace/src/skrub", editable = true }
-ipywidgets = ">=8.1.5, <9"
 plotly = ">=6.0.0, <7"
+ipywidgets = ">=8.1.5, <9"
+skops = { path = "/Users/glemaitre/Documents/scratch/skops", editable = true }
+skore = ">=0.8.1, <0.9"
+skrub = ">=0.5.1, <0.6"
+
