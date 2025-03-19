@@ -2,8 +2,10 @@
 #
 # # `skops` - `scikit-learn` models in production
 #
-# Disclaimer: `skops` is not MLFlow. The vision is to provide building blocks that
-# ultimately are useful to move `scikit-learn` models closer to production.
+# Disclaimer: `skops` is not a model registry as for instance MLflow. The vision is
+# to provide building blocks that ultimately are useful to move `scikit-learn` models
+# closer to production. `skops` would be a so-called "flavor" on which MLflow relies
+# on: https://github.com/mlflow/mlflow/issues/13077
 #
 # ## Storing and loading a model using pickling
 
