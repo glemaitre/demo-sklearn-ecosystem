@@ -35,12 +35,12 @@ table_report
 # Let's model our problem.
 
 # %%
-from skrub import TableVectorizer, TextEncoder
+from skrub import TableVectorizer, MinHashEncoder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import make_pipeline
 
 model = make_pipeline(
-    TableVectorizer(high_cardinality=TextEncoder()),
+    TableVectorizer(high_cardinality=MinHashEncoder()),
     RandomForestRegressor(n_estimators=20, max_leaf_nodes=40),
 )
 model
@@ -118,14 +118,19 @@ estimator_report.metrics.prediction_error().plot(kind="actual_vs_predicted")
 # %%
 list_df = []
 
-for estimator_report, i in zip(report.estimator_reports_, range(len(report.estimator_reports_))):
-    feat_perm = estimator_report.feature_importance.feature_permutation(max_samples=50).droplevel(level = 0).T
-    feat_perm["model"] = i
-    list_df.append(feat_perm)
+for idx, estimator_report in enumerate(report.estimator_reports_):
+    estimator_feature_importance = estimator_report.feature_importance.feature_permutation(
+        n_jobs=-1
+    )
+    estimator_feature_importance = estimator_feature_importance.droplevel(level = 0).T
+    estimator_feature_importance["model"] = idx
+    list_df.append(estimator_feature_importance)
 
 # %%
 import pandas as pd
 df_concat = pd.concat(list_df)
+df_concat.head()
+
 # %%
 import plotly.express as px
 df = px.data.tips()
