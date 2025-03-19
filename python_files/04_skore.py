@@ -114,3 +114,11 @@ estimator_report.help()
 
 # %%
 estimator_report.metrics.prediction_error().plot(kind="actual_vs_predicted")
+
+# %%
+import matplotlib.pyplot as plt
+fig, ax = plt.subplots()
+colors = ['peachpuff', 'orange', 'tomato', "green", "blue"]
+for color, estimator_report in zip(colors, report.estimator_reports_):
+    feat_perm = estimator_report.feature_importance.feature_permutation(max_samples=50)
+    feat_perm.T.boxplot(vert=False, patch_artist=True, boxprops={'facecolor': color})
