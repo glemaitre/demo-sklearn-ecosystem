@@ -123,7 +123,7 @@ for idx, estimator_report in enumerate(report.estimator_reports_):
         n_jobs=-1
     )
     estimator_feature_importance = estimator_feature_importance.droplevel(level = 0).T
-    estimator_feature_importance["model"] = idx
+    estimator_feature_importance["fold_id"] = idx
     list_df.append(estimator_feature_importance)
 
 # %%
@@ -134,7 +134,7 @@ df_concat.head()
 # %%
 import plotly.express as px
 df = px.data.tips()
-fig = px.box(df_concat, color = "model", orientation = "h")
+fig = px.box(df_concat, color = "fold_id", orientation = "h")
 fig.show()
 
 # %% [markdown]
