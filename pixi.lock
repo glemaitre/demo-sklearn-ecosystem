@@ -130,6 +130,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/5f/1ebfd430df05c4f9e438dd3313c4456eab937d976f6ab8ce81a98f9fb381/pydot-3.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl
@@ -154,7 +155,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#cedb63ca7e762dc349967993b5529fcc93e4fa8e
       - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/80/cf/5a1e0dabfa3cad1ab9b09e690fede4aa8fdc0c04d9d7ec8aa9338d56e1e4/skrub-0.5.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#5f68b95ab69fed219e27a7b8b8dd57460acbf227
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d1/c2/fe97d779f3ef3b15f05c94a2f1e3d21732574ed441687474db9d342a7315/soupsieve-2.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -282,6 +283,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/5f/1ebfd430df05c4f9e438dd3313c4456eab937d976f6ab8ce81a98f9fb381/pydot-3.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl
@@ -306,7 +308,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#cedb63ca7e762dc349967993b5529fcc93e4fa8e
       - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/80/cf/5a1e0dabfa3cad1ab9b09e690fede4aa8fdc0c04d9d7ec8aa9338d56e1e4/skrub-0.5.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#5f68b95ab69fed219e27a7b8b8dd57460acbf227
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d1/c2/fe97d779f3ef3b15f05c94a2f1e3d21732574ed441687474db9d342a7315/soupsieve-2.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -433,6 +435,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/22/a6/858897256d0deac81a172289110f31629fc4cee19b6f01283303e18c8db3/ptyprocess-0.7.0-py2.py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8e/37/efad0257dc6e593a18957422533ff0f87ede7c9c6ea010a2177d738fb82f/pure_eval-0.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl
+      - pypi: https://files.pythonhosted.org/packages/b0/5f/1ebfd430df05c4f9e438dd3313c4456eab937d976f6ab8ce81a98f9fb381/pydot-3.0.4-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/05/e7/df2285f3d08fee213f2d041540fa4fc9ca6c2d44cf36d3a035bf2a8d2bcc/pyparsing-3.2.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/ec/57/56b9bcc3c9c6a792fcbaf139543cee77261f3651ca9da0c93f5c1221264b/python_dateutil-2.9.0.post0-py2.py3-none-any.whl
@@ -457,7 +460,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#cedb63ca7e762dc349967993b5529fcc93e4fa8e
       - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: https://files.pythonhosted.org/packages/80/cf/5a1e0dabfa3cad1ab9b09e690fede4aa8fdc0c04d9d7ec8aa9338d56e1e4/skrub-0.5.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#5f68b95ab69fed219e27a7b8b8dd57460acbf227
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/d1/c2/fe97d779f3ef3b15f05c94a2f1e3d21732574ed441687474db9d342a7315/soupsieve-2.6-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -3172,6 +3175,24 @@ packages:
   version: '2.22'
   sha256: c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc
   requires_python: '>=3.8'
+- pypi: https://files.pythonhosted.org/packages/b0/5f/1ebfd430df05c4f9e438dd3313c4456eab937d976f6ab8ce81a98f9fb381/pydot-3.0.4-py3-none-any.whl
+  name: pydot
+  version: 3.0.4
+  sha256: bfa9c3fc0c44ba1d132adce131802d7df00429d1a79cc0346b0a5cd374dbe9c6
+  requires_dist:
+  - pyparsing>=3.0.9
+  - chardet ; extra == 'dev'
+  - parameterized ; extra == 'dev'
+  - ruff ; extra == 'dev'
+  - chardet ; extra == 'tests'
+  - parameterized ; extra == 'tests'
+  - ruff ; extra == 'tests'
+  - tox ; extra == 'tests'
+  - pytest ; extra == 'tests'
+  - pytest-cov ; extra == 'tests'
+  - pytest-xdist[psutil] ; extra == 'tests'
+  - zest-releaser[recommended] ; extra == 'release'
+  requires_python: '>=3.8'
 - pypi: https://files.pythonhosted.org/packages/8a/0b/9fcc47d19c48b59121088dd6da2488a49d5f72dacf8262e2790a1d2c7d15/pygments-2.19.1-py3-none-any.whl
   name: pygments
   version: 2.19.1
@@ -4030,19 +4051,18 @@ packages:
   - skrub ; extra == 'test'
   - xdoctest ; extra == 'test'
   requires_python: '>=3.9,<3.13'
-- pypi: https://files.pythonhosted.org/packages/80/cf/5a1e0dabfa3cad1ab9b09e690fede4aa8fdc0c04d9d7ec8aa9338d56e1e4/skrub-0.5.3-py3-none-any.whl
+- pypi: git+https://github.com/skrub-data/skrub.git#5f68b95ab69fed219e27a7b8b8dd57460acbf227
   name: skrub
-  version: 0.5.3
-  sha256: b6ba417fa83d1f7e9a69656e0860b061381b9bd19808692a2b5bef8588c72775
+  version: 0.6.dev0
   requires_dist:
   - numpy>=1.23.5
-  - packaging>=23.1
   - pandas>=1.5.3
   - scikit-learn>=1.2.1
   - scipy>=1.9.3
   - jinja2>=3.1.2
   - matplotlib>=3.4.3
   - requests>=2.25.0
+  - pydot
   - ipykernel ; extra == 'dev'
   - ipython ; extra == 'dev'
   - jupyterlab ; extra == 'dev'
@@ -4050,11 +4070,13 @@ packages:
   - jupyterlite-pyodide-kernel ; extra == 'doc'
   - numpydoc ; extra == 'doc'
   - pydata-sphinx-theme ; extra == 'doc'
+  - plotly ; extra == 'doc'
   - seaborn ; extra == 'doc'
   - sphinx ; extra == 'doc'
   - sphinx-copybutton ; extra == 'doc'
   - sphinx-gallery ; extra == 'doc'
   - sphinxext-opengraph ; extra == 'doc'
+  - sphinx-autosummary-accessors ; extra == 'doc'
   - statsmodels ; extra == 'doc'
   - pyarrow ; extra == 'doc'
   - black==23.3.0 ; extra == 'lint'
@@ -4062,6 +4084,7 @@ packages:
   - pre-commit ; extra == 'lint'
   - pyarrow ; extra == 'optional'
   - polars ; extra == 'optional'
+  - plotly ; extra == 'optional'
   - sentence-transformers ; extra == 'transformers'
   - numpydoc ; extra == 'test'
   - pytest ; extra == 'test'

@@ -24,6 +24,6 @@ sentence-transformers = ">=3.4.1, <5"
 plotly = ">=6.0.0, <7"
 ipywidgets = ">=8.1.5, <9"
 skore = ">=0.8.1, <1"
-skrub = ">=0.5.1, <1"
+skrub = { git = "https://github.com/skrub-data/skrub.git" }
 skops = { git = "https://github.com/skops-dev/skops.git" }
 
