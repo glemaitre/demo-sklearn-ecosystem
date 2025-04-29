@@ -1,6 +1,6 @@
 # %% [markdown]
 #
-# # `skrub` - less wrangling, more machine learning
+# # `skrub`
 #
 # ## Help in the exploration of the data
 
@@ -20,14 +20,6 @@ from skrub import TableReport
 table = TableReport(employee_salaries.employee_salaries)
 table
 
-# %%
-from skrub import patch_display
-
-patch_display()  # you can use skrub.unpatch_display() to disable the display
-
-# %%
-X
-
 # %% [markdown]
 #
 # ## Help at preprocessing data
@@ -40,12 +32,6 @@ from sklearn.pipeline import make_pipeline
 
 encoder = make_pipeline(ToDatetime(), DatetimeEncoder())
 encoder.fit_transform(X["date_first_hired"])
-
-# %%
-from skrub import TextEncoder
-
-encoder = TextEncoder()
-encoder.fit_transform(X["employee_position_title"])
 
 # %%
 from skrub import MinHashEncoder
@@ -64,6 +50,8 @@ vectorizer = TableVectorizer()
 vectorizer
 
 # %% [markdown]
+#
+# ## Help at getting a good baseline model
 #
 # `tabular_learner` to help at getting meaningful baselines quickly.
 
@@ -84,38 +72,98 @@ from sklearn.model_selection import cross_validate
 
 cv_results = cross_validate(model, X, y)
 cv_results = pd.DataFrame(cv_results)
-
-# %%
 cv_results
 
 # %% [markdown]
 #
-# Table joiner compatible with the scikit-learn API. It allows to handle properly
-# states between training and prediction for which data wrangling with pure pandas or
-# polars would fail.
+# ## Machine learning going back to the source
 
 # %%
-from skrub import Joiner
+from skrub.datasets import fetch_credit_fraud
 
-airports = pd.DataFrame(
-    {
-        "airport_id": [1, 2],
-        "airport_name": ["Charles de Gaulle", "Aeroporto Leonardo da Vinci"],
-        "city": ["Paris", "Roma"],
-    }
+
+dataset = fetch_credit_fraud()
+TableReport(dataset.baskets)
+
+# %%
+TableReport(dataset.products)
+
+# %% [markdown]
+#
+# Express data transformations for machine learning pipelines.
+
+# %%
+import skrub
+
+products = skrub.var("products", dataset.products)
+baskets = skrub.var("baskets", dataset.baskets)
+basket_IDs = baskets[["ID"]].skb.mark_as_X()
+fraud_flags = baskets["fraud_flag"].skb.mark_as_y()
+
+# %%
+from skrub import selectors as s
+from sklearn.ensemble import ExtraTreesClassifier
+
+vectorizer = skrub.TableVectorizer(high_cardinality=skrub.StringEncoder(), n_jobs=-1)
+predictor = ExtraTreesClassifier(n_jobs=-1)
+predictions = (
+    basket_IDs.merge(
+        products.skb.apply(vectorizer, cols=s.all() - "basket_ID")
+        .groupby("basket_ID")
+        .agg("mean")
+        .reset_index(),
+        left_on="ID",
+        right_on="basket_ID",
+    )
+    .drop(columns=["ID", "basket_ID"])
+    .skb.apply(predictor, y=fraud_flags)
 )
-# notice the "Rome" instead of "Roma"
-capitals = pd.DataFrame(
-    {"capital": ["Berlin", "Paris", "Rome"], "country": ["Germany", "France", "Italy"]}
+predictions
+
+# %% [markdown]
+#
+# Revisit the way to define hyperparameters tuning.
+
+# %%
+encoder = skrub.StringEncoder(
+    vectorizer=skrub.choose_from(["tfidf", "hashing"], name="vectorizer"),
 )
-joiner = Joiner(
-    capitals,
-    main_key="city",
-    aux_key="capital",
-    max_dist=0.8,
-    add_match_info=False,
+vectorizer = skrub.TableVectorizer(high_cardinality=encoder, n_jobs=-1)
+predictor = ExtraTreesClassifier(
+    max_leaf_nodes=skrub.choose_from([10, 30, 100], name="max_leaf_nodes"),
+    n_jobs=-1,
 )
-joiner.fit_transform(airports)
+
+# %%
+from pathlib import Path
+import joblib
+
+search_path = Path("../data/01_search.joblib")
+
+if search_path.exists():
+    search = joblib.load(search_path)
+else:
+    search = (
+        basket_IDs.merge(
+            products.skb.apply(vectorizer, cols=s.all() - "basket_ID")
+            .groupby("basket_ID")
+            .agg("mean")
+            .reset_index(),
+            left_on="ID",
+            right_on="basket_ID",
+        )
+        .drop(columns=["ID", "basket_ID"])
+        .skb.apply(predictor, y=fraud_flags)
+    ).skb.get_randomized_search(fitted=True, scoring="roc_auc", verbose=2)
+    joblib.dump(search, search_path)
+
+# %%
+pd.DataFrame(search.cv_results_)
+
+# %%
+
+search.plot_results()
+# %%
 
 # %% [markdown]
 #
