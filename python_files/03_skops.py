@@ -1,6 +1,6 @@
 # %% [markdown]
 #
-# # `skops` - `scikit-learn` models in production
+# # `skops`
 #
 # Disclaimer: `skops` is not a model registry as for instance MLflow. The vision is
 # to provide building blocks that ultimately are useful to move `scikit-learn` models
@@ -29,7 +29,6 @@ model = joblib.load("../data/03_model.joblib")
 
 # %%
 print(f"Accuracy: {model.score(X_test, y_test):.2f}")
-
 
 # %% [markdown]
 #
@@ -88,7 +87,6 @@ with open("/tmp/dumps/demo.txt", "r") as f:
 # So by default, `skops` trust scikit-learn objects and we can do the same as with
 # `joblib`.
 
-
 # %%
 from skops import io as sio
 
@@ -138,6 +136,7 @@ sio.visualize("../data/03_model.skops")
 
 # %%
 sio.load("../data/03_model.skops")
+
 # %% [markdown]
 #
 # But we are sure of what we handle, then we can load the model with the `trusted`

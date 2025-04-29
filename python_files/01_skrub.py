@@ -161,9 +161,7 @@ else:
 pd.DataFrame(search.cv_results_)
 
 # %%
-
 search.plot_results()
-# %%
 
 # %% [markdown]
 #
