@@ -155,8 +155,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/2a/8e/2ee81652472f3c11503d1780c41844a9a9656989b69c29811a4631e4aeb9/setuptools-80.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#c0a96e2ec55379ba77b88b9e0c1e94db2c0e3301
-      - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: git+https://github.com/skrub-data/skrub.git#bb61c22182a5c1f875d73224df15a30b9a8b7a21
+      - pypi: https://files.pythonhosted.org/packages/b1/fa/5ed8834a783fd8dfb31049e1b7cfcf9b1acf7dc7b5b690c87da7125cf8b7/skore-0.8.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#0844a8af0c785242aeb730510187c18f703224a8
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e7/9c/0e6afc12c269578be5c0c1c9f4b49a8d32770a080260c333ac04cc1c832d/soupsieve-2.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -308,8 +308,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/2a/8e/2ee81652472f3c11503d1780c41844a9a9656989b69c29811a4631e4aeb9/setuptools-80.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#c0a96e2ec55379ba77b88b9e0c1e94db2c0e3301
-      - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: git+https://github.com/skrub-data/skrub.git#bb61c22182a5c1f875d73224df15a30b9a8b7a21
+      - pypi: https://files.pythonhosted.org/packages/b1/fa/5ed8834a783fd8dfb31049e1b7cfcf9b1acf7dc7b5b690c87da7125cf8b7/skore-0.8.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#0844a8af0c785242aeb730510187c18f703224a8
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e7/9c/0e6afc12c269578be5c0c1c9f4b49a8d32770a080260c333ac04cc1c832d/soupsieve-2.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -460,8 +460,8 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/2a/8e/2ee81652472f3c11503d1780c41844a9a9656989b69c29811a4631e4aeb9/setuptools-80.0.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/b7/ce/149a00dd41f10bc29e5921b496af8b574d8413afcd5e30dfa0ed46c2cc5e/six-1.17.0-py2.py3-none-any.whl
       - pypi: git+https://github.com/skops-dev/skops.git#c0a96e2ec55379ba77b88b9e0c1e94db2c0e3301
-      - pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
-      - pypi: git+https://github.com/skrub-data/skrub.git#bb61c22182a5c1f875d73224df15a30b9a8b7a21
+      - pypi: https://files.pythonhosted.org/packages/b1/fa/5ed8834a783fd8dfb31049e1b7cfcf9b1acf7dc7b5b690c87da7125cf8b7/skore-0.8.3-py3-none-any.whl
+      - pypi: git+https://github.com/skrub-data/skrub.git#0844a8af0c785242aeb730510187c18f703224a8
       - pypi: https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/e7/9c/0e6afc12c269578be5c0c1c9f4b49a8d32770a080260c333ac04cc1c832d/soupsieve-2.7-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/f1/7b/ce1eafaf1a76852e2ec9b22edecf1daa58175c090266e9f6c64afcd81d91/stack_data-0.6.3-py3-none-any.whl
@@ -3999,10 +3999,10 @@ packages:
   - scipy>=1.10.0
   - rich>=12 ; extra == 'rich'
   requires_python: '>=3.9'
-- pypi: https://files.pythonhosted.org/packages/08/2f/1be7cad549e9939dea6f2ad9d29c6b7ca4f1fe3d49e8e3c39a5ec0e16146/skore-0.8.2-py3-none-any.whl
+- pypi: https://files.pythonhosted.org/packages/b1/fa/5ed8834a783fd8dfb31049e1b7cfcf9b1acf7dc7b5b690c87da7125cf8b7/skore-0.8.3-py3-none-any.whl
   name: skore
-  version: 0.8.2
-  sha256: 96553734ed167847c8c6b3d2d2cd252081c1be935162263721d7fb6e26d45d3e
+  version: 0.8.3
+  sha256: e2a50176f607fbabdf3a03073e7a50a1b2f06036bd3fe6b2066bf8055ab59dd4
   requires_dist:
   - diskcache
   - joblib
@@ -4019,10 +4019,12 @@ packages:
   - kaleido ; extra == 'sphinx'
   - numpydoc ; extra == 'sphinx'
   - plotly>=5,<6 ; extra == 'sphinx'
-  - polars ; extra == 'sphinx'
+  - polars-lts-cpu ; platform_machine == 'x86_64' and extra == 'sphinx'
+  - polars ; platform_machine != 'x86_64' and extra == 'sphinx'
   - pydata-sphinx-theme ; extra == 'sphinx'
+  - scikit-learn<1.7 ; extra == 'sphinx'
   - seaborn ; extra == 'sphinx'
-  - sentence-transformers ; extra == 'sphinx'
+  - sentence-transformers<4 ; extra == 'sphinx'
   - skrub ; extra == 'sphinx'
   - sphinx-autosummary-accessors ; extra == 'sphinx'
   - sphinx-copybutton ; extra == 'sphinx'
@@ -4030,22 +4032,23 @@ packages:
   - sphinx-gallery ; extra == 'sphinx'
   - sphinx-tabs ; extra == 'sphinx'
   - sphinx<8.2.0 ; extra == 'sphinx'
+  - transformers<4.51 ; extra == 'sphinx'
   - altair>=5,<6 ; extra == 'test'
   - pillow ; extra == 'test'
   - plotly>=5,<6 ; extra == 'test'
-  - polars ; extra == 'test'
+  - polars-lts-cpu ; platform_machine == 'x86_64' and extra == 'test'
+  - polars ; platform_machine != 'x86_64' and extra == 'test'
   - pre-commit ; extra == 'test'
   - pytest ; extra == 'test'
   - pytest-cov ; extra == 'test'
   - pytest-order ; extra == 'test'
   - pytest-randomly ; extra == 'test'
   - pytest-xdist ; extra == 'test'
-  - ruff ; extra == 'test'
   - scikit-learn<1.7 ; extra == 'test'
   - skrub ; extra == 'test'
   - xdoctest ; extra == 'test'
   requires_python: '>=3.9,<3.13'
-- pypi: git+https://github.com/skrub-data/skrub.git#bb61c22182a5c1f875d73224df15a30b9a8b7a21
+- pypi: git+https://github.com/skrub-data/skrub.git#0844a8af0c785242aeb730510187c18f703224a8
   name: skrub
   version: 0.6.dev0
   requires_dist:

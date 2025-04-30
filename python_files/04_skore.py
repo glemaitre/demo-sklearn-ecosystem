@@ -115,6 +115,29 @@ estimator_report.help()
 estimator_report.metrics.prediction_error().plot(kind="actual_vs_predicted")
 
 # %%
+import numpy as np
+import skrub
+from sklearn.linear_model import RidgeCV
+
+model = skrub.tabular_learner(RidgeCV(np.logspace(-3, 3, 10)))
+model
+
+# %%
+report = CrossValidationReport(estimator=model, X=df, y=y, cv_splitter=5, n_jobs=-1)
+my_project.put("RidgeCV model report", report)
+
+# %%
+from skore import ComparisonReport
+
+report = ComparisonReport(
+    reports={
+        "Random Forest": my_project.get("Random Forest model report"),
+        "RidgeCV": my_project.get("RidgeCV model report"),
+    },
+)
+
+# %%
+report.metrics.report_metrics(indicator_favorability=True)
 
 # %% [markdown]
 #
