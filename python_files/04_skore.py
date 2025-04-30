@@ -5,7 +5,6 @@
 # %%
 import os
 
-os.environ["POLARS_ALLOW_FORKING_THREAD"] = "1"
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
 # %% [markdown]
@@ -35,12 +34,12 @@ table_report
 # Let's model our problem.
 
 # %%
-from skrub import TableVectorizer, MinHashEncoder
+from skrub import TableVectorizer, TextEncoder
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.pipeline import make_pipeline
 
 model = make_pipeline(
-    TableVectorizer(high_cardinality=MinHashEncoder()),
+    TableVectorizer(high_cardinality=TextEncoder()),
     RandomForestRegressor(n_estimators=20, max_leaf_nodes=40),
 )
 model
@@ -52,7 +51,7 @@ model
 # %%
 from skore import CrossValidationReport
 
-report = CrossValidationReport(estimator=model, X=df, y=y, cv_splitter=5, n_jobs=4)
+report = CrossValidationReport(estimator=model, X=df, y=y, cv_splitter=5, n_jobs=-1)
 
 # %%
 report.help()
@@ -89,7 +88,7 @@ print(f"Time taken: {end - start:.2f} seconds")
 score
 
 # %%
-report.cache_predictions(n_jobs=4)
+report.cache_predictions(n_jobs=-1)
 
 # %%
 my_project.put("Random Forest model report", report)
@@ -116,26 +115,6 @@ estimator_report.help()
 estimator_report.metrics.prediction_error().plot(kind="actual_vs_predicted")
 
 # %%
-list_df = []
-
-for idx, estimator_report in enumerate(report.estimator_reports_):
-    estimator_feature_importance = estimator_report.feature_importance.feature_permutation(
-        n_jobs=-1
-    )
-    estimator_feature_importance = estimator_feature_importance.droplevel(level = 0).T
-    estimator_feature_importance["fold_id"] = idx
-    list_df.append(estimator_feature_importance)
-
-# %%
-import pandas as pd
-df_concat = pd.concat(list_df)
-df_concat.head()
-
-# %%
-import plotly.express as px
-df = px.data.tips()
-fig = px.box(df_concat, color = "fold_id", orientation = "h")
-fig.show()
 
 # %% [markdown]
 #
