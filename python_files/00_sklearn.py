@@ -74,6 +74,10 @@ for est, ax in zip_longest(cv_results["estimator"], axs.ravel()):
         est, data_test, target_test, kind="actual_vs_predicted", ax=ax
     )
     ax.set_title(f"R2 score: {est.score(data_test, target_test):.2f}")
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_position(("outward", 10))
+    ax.spines["bottom"].set_position(("outward", 10))
 plt.tight_layout()
 
 # %% [markdown]

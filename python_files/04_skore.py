@@ -114,6 +114,8 @@ estimator_report.help()
 # %%
 estimator_report.metrics.prediction_error().plot(kind="actual_vs_predicted")
 
+# %%
+
 # %% [markdown]
 #
 # ## Conclusions
