@@ -98,7 +98,7 @@ preprocessor = make_column_transformer(
 model = make_pipeline(
     preprocessor,
     PolynomialFeatures(degree=1, include_bias=False, interaction_only=True),
-    SelectKBest(k=30),
+    SelectKBest(),
     RidgeCV(alphas=np.logspace(-5, 5, num=50)),
 )
 
