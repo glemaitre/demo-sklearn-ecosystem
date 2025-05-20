@@ -81,7 +81,6 @@ cv_results
 # %%
 from skrub.datasets import fetch_credit_fraud
 
-
 dataset = fetch_credit_fraud()
 TableReport(dataset.baskets)
 
